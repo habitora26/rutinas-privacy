@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Política de Privacidad — Rutinass</title>
+  <meta name="description" content="Política de Privacidad de Rutinass" />
+  <style>
+    :root{
+      /* 🎨 Paleta tipo “gold premium” como tu app */
+      --bg1:#070b12;
+      --bg2:#0b1423;
+      --card: rgba(255,255,255,.07);
+      --stroke: rgba(255,255,255,.14);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+
+      --gold:#f5c542;
+      --gold2:#ffdd7a;
+      --blue:#2aa9ff;
+      --teal:#32e6c6;
+
+      --ok:#36d399;
+      --warn:#fbbf24;
+
+      --shadow: 0 18px 50px rgba(0,0,0,.38);
+      --radius: 18px;
+      --max: 960px;
+
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(1200px 700px at 12% 8%, rgba(245,197,66,.25), transparent 55%),
+        radial-gradient(1000px 650px at 92% 6%, rgba(42,169,255,.20), transparent 55%),
+        radial-gradient(900px 650px at 60% 95%, rgba(50,230,198,.14), transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height:100vh;
+      line-height:1.65;
+    }
+
+    a{ color: #bfe6ff; text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 42px 18px 62px;
+    }
+
+    header{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      margin-bottom: 16px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo{
+      width:44px;
+      height:44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(245,197,66,.95), rgba(42,169,255,.78));
+      box-shadow: 0 14px 34px rgba(0,0,0,.40);
+      position: relative;
+      overflow:hidden;
+    }
+    .logo::after{
+      content:"";
+      position:absolute;
+      inset:-45%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.36), transparent 48%);
+      transform: rotate(18deg);
+    }
+
+    .title{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+    .title h1{
+      margin:0;
+      font-size: 18px;
+      letter-spacing:.2px;
+    }
+    .title p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--stroke);
+      backdrop-filter: blur(10px);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .pill strong{ color: var(--text); font-weight: 650; }
+
+    .badge{
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.18);
+      color: rgba(255,255,255,.78);
+      display:inline-block;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      margin-top: 14px;
+    }
+
+    h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+    p{ margin: 10px 0; color: var(--muted); }
+
+    ul{
+      margin: 10px 0 0 18px;
+      color: var(--muted);
+    }
+    li{ margin: 6px 0; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    @media (max-width: 820px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    .mini{
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .mini h3{
+      margin: 0 0 6px;
+      font-size: 14px;
+    }
+
+    .callout{
+      display:flex;
+      gap: 12px;
+      align-items:flex-start;
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      margin-top: 12px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      margin-top: 6px;
+      background: linear-gradient(180deg, var(--gold2), var(--gold));
+      box-shadow: 0 0 0 6px rgba(245,197,66,.10);
+      flex: 0 0 auto;
+    }
+
+    .hr{
+      height:1px;
+      background: rgba(255,255,255,.12);
+      margin: 14px 0;
+    }
+
+    .footer{
+      margin-top: 18px;
+      color: rgba(255,255,255,.55);
+      font-size: 12px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .kpi{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 10px;
+    }
+    .kpi span{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.16);
+      color: rgba(255,255,255,.74);
+      font-size: 12px;
+    }
+    .dotmini{
+      width:8px;height:8px;border-radius:50%;
+      background: linear-gradient(180deg, var(--blue), var(--teal));
+      box-shadow: 0 0 0 5px rgba(42,169,255,.10);
+    }
+
+    code.inline{
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.20);
+      color: rgba(255,255,255,.86);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">
+          <h1>Política de Privacidad — Rutinass</h1>
+          <p>Última actualización: <strong>Febrero 2026</strong></p>
+        </div>
+      </div>
+
+      <div class="pill" title="Información rápida">
+        <span>App:</span> <strong>Rutinass</strong> <span class="badge">iOS</span>
+      </div>
+    </header>
+
+    <div class="card">
+      <h2>Resumen</h2>
+      <p>
+        Rutinass te ayuda a crear rutinas y tareas para dar seguimiento a tu progreso diario.
+        La app está diseñada para funcionar <strong>sin cuenta</strong> y con los datos guardados
+        principalmente en tu dispositivo.
+      </p>
+
+      <div class="kpi">
+        <span><span class="dotmini" aria-hidden="true"></span> Sin registro</span>
+        <span><span class="dotmini" aria-hidden="true"></span> Datos locales</span>
+        <span><span class="dotmini" aria-hidden="true"></span> Suscripción opcional</span>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <h3>✅ Lo que NO hacemos</h3>
+          <ul>
+            <li>No pedimos crear cuenta, usuario o contraseña.</li>
+            <li>No recopilamos tu nombre, teléfono o dirección.</li>
+            <li>No vendemos tu información personal.</li>
+          </ul>
+        </div>
+
+        <div class="mini">
+          <h3>ℹ️ Lo que SÍ puede ocurrir</h3>
+          <ul>
+            <li>La app guarda tus rutinas y tareas en el dispositivo.</li>
+            <li>Si compras Premium, Apple procesa el pago (nosotros no vemos tu tarjeta).</li>
+            <li>Si activas notificaciones, iOS nos permite enviarte recordatorios.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="dot" aria-hidden="true"></div>
+        <div>
+          <strong>Importante:</strong>
+          <p style="margin-top:6px">
+            Rutinass no solicita datos personales sensibles. La información de compra de la suscripción
+            se gestiona mediante Apple (StoreKit). Tú puedes administrar o cancelar tu suscripción desde
+            Ajustes del iPhone.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Datos que se recopilan</h2>
+      <p>
+        En general, Rutinass no recopila datos personales directamente.
+        Tus rutinas (nombre, tareas, progreso) se guardan en tu dispositivo.
+      </p>
+
+      <ul>
+        <li><strong>Datos de la app (locales):</strong> rutinas, tareas, estado completado, rachas y progreso diario.</li>
+        <li><strong>Datos de compra (Apple):</strong> si adquieres Premium, Apple gestiona el cobro y el estado de la suscripción.</li>
+        <li><strong>Datos técnicos mínimos:</strong> iOS puede generar registros técnicos (p. ej., fallos) para funcionamiento del sistema.</li>
+      </ul>
+
+      <div class="hr"></div>
+
+      <p>
+        Nota: Si en el futuro se agregan analíticas/ads (por ejemplo, Firebase o AdMob),
+        esta política se actualizará antes de activarlos.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Notificaciones</h2>
+      <p>
+        Si habilitas recordatorios, Rutinass puede enviarte notificaciones sobre tareas o rutinas.
+        Puedes desactivarlas en cualquier momento desde Ajustes del iPhone.
+      </p>
+      <ul>
+        <li>No usamos notificaciones para marketing agresivo.</li>
+        <li>Las notificaciones se envían a través de iOS; no se utilizan para identificarte personalmente.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Suscripción Premium</h2>
+      <p>
+        Rutinass ofrece una suscripción auto-renovable opcional (“Rutinass Premium”).
+        El proceso de compra se realiza mediante Apple y cumple sus políticas.
+      </p>
+      <ul>
+        <li>El pago se carga a tu Apple ID al confirmar la compra.</li>
+        <li>La suscripción se renueva automáticamente a menos que se cancele con al menos 24 horas de anticipación.</li>
+        <li>Puedes administrar o cancelar en <code class="inline">Ajustes > Apple ID > Suscripciones</code>.</li>
+      </ul>
+
+      <p>
+        Términos de uso (EULA estándar de Apple):
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">
+          https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+        </a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Compartir / Exportación (PDF y CSV)</h2>
+      <p>
+        Si utilizas exportación, el archivo (PDF/CSV) se genera en tu dispositivo y luego tú decides
+        si lo compartes (por ejemplo, por AirDrop, correo, archivos, etc.).
+      </p>
+      <ul>
+        <li>Rutinass no envía automáticamente esos archivos a nuestros servidores.</li>
+        <li>Al compartir, aplican las políticas del servicio destino (Mail, iCloud, Drive, etc.).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Seguridad</h2>
+      <p>
+        Tomamos medidas razonables para proteger la información. Aun así, ningún método de transmisión o
+        almacenamiento es 100% seguro. Te recomendamos proteger tu dispositivo con Face ID/Touch ID o código.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Cambios a esta política</h2>
+      <p>
+        Podemos actualizar esta Política de Privacidad ocasionalmente. Si hacemos cambios importantes,
+        actualizaremos la fecha en esta página.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Contacto</h2>
+      <p>
+        Si tienes preguntas sobre esta política, puedes escribir a:
+        <br />
+        <strong>Correo:</strong> <a href="mailto:habitora26@gmail.com">tu-correo@ejemplo.com</a>
+      </p>
+
+      <p class="badge">Cambia el correo por el tuyo real antes de publicar.</p>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Habitora Apps</div>
+      <div>Hecho para cumplir App Store (Suscripción + Privacidad)</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
